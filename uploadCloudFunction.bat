@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e cc-cloud-5gt7gfs4564db27d --n quickstartFunctions --r --project "D:\[AAA]file\project\wechatminiprogram\xuzicloud" --report_first --report

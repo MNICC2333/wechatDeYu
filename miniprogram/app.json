@@ -1,0 +1,49 @@
+{
+    "pages": [     
+        "pages/me/me",
+        "pages/index/index",
+        "pages/citylist/citylist",       
+        "pages/detail/detail",
+        "pages/test/test",
+        "pages/movie/movie"
+        
+    ],
+    "permission": {
+      "scope.userLocation": {
+        "desc": "当腰获取当前地址..."
+      }
+    },
+    "requiredPrivateInfos": [
+      "getLocation"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f03d37",
+        "navigationBarTitleText": "乐活影视",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+      "color": "#shf2",
+      "selectedColor": "#e95900",
+      "list": [{
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "/image/index_disable.png",
+          "selectedIconPath": "/image/index_enable.png"      
+        },
+        {
+           "pagePath":"pages/movie/movie",
+            "text": "电影",
+            "iconPath": "/image/theatre_disable.png",
+            "selectedIconPath": "/image/theatre_enable.png"
+         },
+         {
+             "pagePath":"pages/me/me",
+             "text": "我的",
+             "iconPath": "/image/me_disable.png",
+             "selectedIconPath": "/image/me_enable.png"
+         }
+        ]
+  },
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view>
+<!-- 导航 start -->
+  <view class="nav">
+    <navigator url="/pages/citylist/citylist">
+      <view class="nav_address" bindtap="getLocationInfo">{{city}}</view>
+      <text class="nav_address_arrow"></text>
+    </navigator>
+    <view class="nav_list">
+      <view class="nav_item {{cid==1?'nav_item_active':''}}" data-sign="1" bindtap="cutList"> 热门 </view>
+      <view class="nav_item {{cid==2?'nav_item_active':''}}" data-sign="2" bindtap="cutList"> 待映 </view>
+      <view class="nav_item {{cid==3?'nav_item_active':''}}" data-sign="3" bindtap="cutList"> 推荐 </view>
+    </view>
+  </view>
+  <!-- 导航 end -->
+  <!-- 电影列表 start -->
+  <view class="movie_list">
+    <view class="movie_contain"  wx:for="{{movies}}" wx:key="id">
+      <navigator class="movie_dom" url="/pages/detail/detail?id={{item.id}}">
+        <image src="{{item.cover}}" mode="heightFix"/>
+        <view class="movie_test">
+          <text class="movie_title">{{item.moviename}}</text>
+          <text class="movie_category">{{item.movietype}}</text>
+          <text class="movie_actor">主演：{{item.actors}}</text>
+        </view>
+        <view class="num">{{item.score}}</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 电影列表 end -->
+</view>
